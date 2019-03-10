@@ -20,10 +20,12 @@ from django.conf import settings
 from django.conf.urls.static import static
 
 from accounts.api import urls as accounts_api_urls
+from references.api import urls as references_api_urls
 
 urlpatterns = [
     path('admin/', admin.site.urls),
 	path('', include(accounts_api_urls)),
+    path('', include(references_api_urls)),    
 ]
 
 if settings.DEBUG:
